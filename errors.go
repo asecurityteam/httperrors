@@ -7,17 +7,18 @@ import (
 )
 
 const (
-	invalidInput       string = "Bad Request"
-	unauthorized       string = "Unauthorized"
-	forbidden          string = "Forbidden"
-	notFound           string = "Not Found"
-	methodNotAllowed   string = "Method Not Allowed"
-	entityTooLarge     string = "Entity Too Large"
-	failedDependency   string = "Failed Dependency"
-	tooManyRequests    string = "Too Many Requests"
-	internal           string = "Internal Server Error"
-	badGateway         string = "Bad Gateway"
-	serviceUnavailable string = "Service Unavailable"
+	invalidInput        string = "Bad Request"
+	unauthorized        string = "Unauthorized"
+	forbidden           string = "Forbidden"
+	notFound            string = "Not Found"
+	methodNotAllowed    string = "Method Not Allowed"
+	entityTooLarge      string = "Entity Too Large"
+	unprocessableEntity string = "Unprocessable Entity"
+	failedDependency    string = "Failed Dependency"
+	tooManyRequests     string = "Too Many Requests"
+	internal            string = "Internal Server Error"
+	badGateway          string = "Bad Gateway"
+	serviceUnavailable  string = "Service Unavailable"
 )
 
 var errorCodeMap = map[int]string{
@@ -27,6 +28,7 @@ var errorCodeMap = map[int]string{
 	http.StatusNotFound:              notFound,
 	http.StatusMethodNotAllowed:      methodNotAllowed,
 	http.StatusRequestEntityTooLarge: entityTooLarge,
+	http.StatusUnprocessableEntity:   unprocessableEntity,
 	http.StatusFailedDependency:      failedDependency,
 	http.StatusTooManyRequests:       tooManyRequests,
 	http.StatusInternalServerError:   internal,
