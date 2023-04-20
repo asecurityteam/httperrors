@@ -51,11 +51,12 @@ type ErrorJSON struct {
 //
 // Example:  Given an http.StatusNotFound (404) as the errorCode and
 // "Could not find user" as the reason, the response would be:
-// {
-//   Code:  404,
-//   Message: "Not Found",
-//   Reason: "Could not find user"
-// }
+//
+//	{
+//	  Code:  404,
+//	  Message: "Not Found",
+//	  Reason: "Could not find user"
+//	}
 func WriteError(w http.ResponseWriter, errorCode int, reason string) {
 	_, exists := errorCodeMap[errorCode]
 	if !exists {
